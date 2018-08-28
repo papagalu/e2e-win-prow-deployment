@@ -19,10 +19,9 @@ function collect_logs () {
 
     mkdir -p $output
 
-    git clone https://github.com/papagalu/logslurp
+    git clone https://github.com/PatrickLang/logslurp
     pushd "logslurp"
-        git checkout customize_logslurp
-        pwsh logslurp.ps1 -WinUser "$user" -WinPass "$pass" -OutputFolder "$output"
+        pwsh logslurp.ps1 -win_user "$user" -win_pass "$pass" -OutputFolder "$output"
     popd
 }
 
